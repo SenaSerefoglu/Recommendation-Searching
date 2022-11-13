@@ -7,7 +7,6 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import os
 
-
 # We wont count this words:
 ignorewords = set(['lang','html','the', 'of', 'to', 'and', 'a', 'in', 'is', 'it', 'if'])
 

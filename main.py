@@ -5,4 +5,5 @@ def main():
     root.title("Ders Arama ve Araştırma")
     app = Example(root)
     root.mainloop()
+    
 main()

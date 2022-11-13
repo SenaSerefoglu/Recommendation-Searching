@@ -31,7 +31,6 @@ def cosine_sim_vectors(v1,v2): # Used to calculate the similarity of strings.
 
 
 # https://towardsdatascience.com/calculating-string-similarity-in-python-276e18a7d33a.
-
 def kcluster(data,distance=cosine_sim_vectors,k=4):
     cleaned = list(map(clean_string, data))
     vectorizer = CountVectorizer().fit_transform(cleaned)

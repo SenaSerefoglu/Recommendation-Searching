@@ -4,7 +4,6 @@ from classes import *
 import tkinter.messagebox as msgbox
 import tkinter.scrolledtext as tkst
 
-
 class Example(Frame):
     def __init__(self, parent):
         Frame.__init__(self, parent)
