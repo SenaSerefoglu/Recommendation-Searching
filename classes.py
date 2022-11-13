@@ -10,16 +10,7 @@ import os
 # We wont count this words:
 ignorewords = set(['lang','html','the', 'of', 'to', 'and', 'a', 'in', 'is', 'it', 'if'])
 
-class crawler:
-    ''' Bu sinif webde arama yapip aramalari veritabanina aktaracaktir.
-    
-        v1.0 - crawl dolduruldu
-        v0.4 - addLinkRef olusturuldu
-        v0.3 - isindexed olusturuldu ve addtoindex dolduruldu. 
-        v0.2 - gettextonly ve separatewords fonksiyonlari dolduruldu. Boylece html sayfalarinda ilgili yazilar ayiklanabilir.
-        v0.1 - init fonksiyonu guncellendi, createindextables ve close fonksiyonlari tanimlandi
-    '''
-    
+class crawler:    
     # Initialize the crawler with the name of database tabs
     def __init__(self, dbtables):
         ''' dbtables bir sozluk olmali:
@@ -200,10 +191,10 @@ class searcher:
         for (score,url) in rankedscores[0:10]:
             if url == "https://ois.istinye.edu.tr/bilgipaketi/eobsakts/ogrenimprogrami/program_kodu/0401001/menu_id/p_38/tip/L/submenuheader/2/ln/tr/print/1":
                 continue
-            liste = []
-            liste.append(score)
-            liste.append(self.urllist[url]) # crawl sınıfındaki url'lerin ders kodu karşılığını eklemesini istiyoruz.
-            self.data.append(liste)
+            list0 = []
+            list0.append(score)
+            list0.append(self.urllist[url])
+            self.data.append(list0)
         return self.data
 
     def normalizescores(self,scores,smallIsBetter=0):
